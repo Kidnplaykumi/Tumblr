@@ -27,6 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         session.configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
         photoImageView.delegate = self
         photoImageView.dataSource = self
+        self.photoImageView.rowHeight = 200
         let task = session.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 print(error.localizedDescription)
@@ -35,7 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 print(dataDictionary)
                 let responseDictionary = dataDictionary["response"] as! [String: Any]
                 self.posts = responseDictionary["posts"] as! [[String: Any]]
-                self.tableView.reloadData()
+                self.photoImageView.reloadData()
                 
                 // TODO: Get the posts and store in posts property
                 
@@ -52,11 +53,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let post = posts[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         if let photos = post["photos"] as? [[String: Any]] {
-            cell.textLabel?.text = "This is row \(indexPath.row)"
             let photo = photos[0]
             let originalSize = photo["original_size"] as! [String: Any]
             let urlString = originalSize["url"] as! String
             let url = URL(string: urlString)
+            cell.pictureView.af_setImage(withURL: url!)
+            
         
             // photos is NOT nil, we can use it!
             // TODO: Get the photo url
