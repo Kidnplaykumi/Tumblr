@@ -35,6 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 print(dataDictionary)
                 let responseDictionary = dataDictionary["response"] as! [String: Any]
                 self.posts = responseDictionary["posts"] as! [[String: Any]]
+                self.tableView.reloadData()
                 
                 // TODO: Get the posts and store in posts property
                 
@@ -56,7 +57,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let originalSize = photo["original_size"] as! [String: Any]
             let urlString = originalSize["url"] as! String
             let url = URL(string: urlString)
-            self.tableView.reloadData()
+        
             // photos is NOT nil, we can use it!
             // TODO: Get the photo url
         }
