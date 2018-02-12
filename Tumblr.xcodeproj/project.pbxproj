@@ -15,6 +15,7 @@
 		E0249FB8202375C400673C87 /* TumblrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0249FB7202375C400673C87 /* TumblrUITests.swift */; };
 		E0A0A48920238177000EC85D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A0A48820238177000EC85D /* ViewController.swift */; };
 		E0D5CD88202E4C7100BF0C94 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D5CD87202E4C7100BF0C94 /* PhotoCell.swift */; };
+		E0D5CD8E2031101700BF0C94 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D5CD8D2031101700BF0C94 /* PhotoDetailsViewController.swift */; };
 		E4265041825BD4D19BB3C772 /* Pods_Tumblr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82084FAC31887B8EA992539D /* Pods_Tumblr.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		E0249FB9202375C400673C87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0A0A48820238177000EC85D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E0D5CD87202E4C7100BF0C94 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		E0D5CD8D2031101700BF0C94 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		E86B777910B4D0C8DA70249C /* Pods-Tumblr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tumblr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tumblr/Pods-Tumblr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 				E0A0A48820238177000EC85D /* ViewController.swift */,
 				E0D5CD87202E4C7100BF0C94 /* PhotoCell.swift */,
 				E0249F97202375C300673C87 /* AppDelegate.swift */,
+				E0D5CD8D2031101700BF0C94 /* PhotoDetailsViewController.swift */,
 				E0249F9B202375C300673C87 /* Main.storyboard */,
 				E0249F9E202375C300673C87 /* Assets.xcassets */,
 				E0249FA0202375C300673C87 /* LaunchScreen.storyboard */,
@@ -353,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0D5CD8E2031101700BF0C94 /* PhotoDetailsViewController.swift in Sources */,
 				E0A0A48920238177000EC85D /* ViewController.swift in Sources */,
 				E0D5CD88202E4C7100BF0C94 /* PhotoCell.swift in Sources */,
 				E0249F98202375C300673C87 /* AppDelegate.swift in Sources */,
