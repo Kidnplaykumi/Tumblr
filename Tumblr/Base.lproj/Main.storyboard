@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vn9-HK-Prp">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -38,6 +38,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="pictureView" destination="bBE-K3-clL" id="w0n-WC-tc0"/>
+                                            <segue destination="1qd-8Q-tbr" kind="show" id="sas-aG-z8a"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -46,53 +47,56 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HWL-fR-0Ux"/>
                     <connections>
                         <outlet property="photoImageView" destination="c4k-4m-ZHv" id="cBk-Ai-Fum"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.13043478260872" y="113.31521739130436"/>
+            <point key="canvasLocation" x="1131.8840579710145" y="-501.35869565217394"/>
         </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="xlK-be-jaV">
+        <!--Photo Detail View Controller-->
+        <scene sceneID="mve-Ct-b26">
             <objects>
-                <viewController id="UKs-CV-h5O" customClass="UICollectionViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="c8j-6W-ftc">
+                <viewController id="1qd-8Q-tbr" customClass="PhotoDetailViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tB3-OF-OpP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9rR-uc-hff">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="371"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xnM-7h-Z7x">
+                                <rect key="frame" x="0.0" y="64" width="414" height="277"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="jKP-vu-bWQ"/>
+                        <viewLayoutGuide key="safeArea" id="PjN-gw-m1l"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IHK-ux-jwm"/>
+                    <connections>
+                        <outlet property="DetailImage" destination="xnM-7h-Z7x" id="xze-4H-wnA"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CRL-po-35Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0IW-zr-w1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1289.8550724637682" y="113.31521739130436"/>
+            <point key="canvasLocation" x="2226.0869565217395" y="-505.43478260869568"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="onY-CC-mUy">
+        <scene sceneID="ODI-Fx-Hb9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ICn-xe-xuz" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vn9-HK-Prp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jFE-dt-yTi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dxg-zA-Slo">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="UKs-CV-h5O" kind="relationship" relationship="rootViewController" id="hhN-2i-fvx"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4A2-PR-Nqo"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="thO-sG-nUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDR-4b-Gyw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1290" y="-646"/>
+            <point key="canvasLocation" x="217" y="-501"/>
         </scene>
     </scenes>
 </document>

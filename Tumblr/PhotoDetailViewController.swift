@@ -1,19 +1,26 @@
 //
-//  PhotoDetailsViewController.swift
+//  PhotoDetailViewController.swift
 //  Tumblr
 //
-//  Created by Elijah Kumi on 2/11/18.
+//  Created by Elijah Kumi on 2/14/18.
 //  Copyright © 2018 Elijah Kumi. All rights reserved.
 //
 
 import UIKit
+import AlamofireImage
 
-class PhotoDetailsViewController: UIViewController {
+class PhotoDetailViewController: UIViewController {
+    
+    @IBOutlet weak var DetailImage: UIImageView!
+    
+    var photoURL: URL!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+      DetailImage.af_setImage(withURL: photoURL)
+        
     }
 
     override func didReceiveMemoryWarning() {
